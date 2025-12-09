@@ -6,7 +6,9 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 
 const app = express();
-app.use(cors());
+app.use(cors(
+    origin=['http://localhost:3000','https://ip-frontend-nljd.onrender.com']
+));
 app.use(express.json());
 
 
